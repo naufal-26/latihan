@@ -162,8 +162,8 @@ foreach ($paymentMethods as $pm) {
         <nav class="nav">
             <a href="index.php" class="nav-item"><span class="nav-icon">▦</span> Dashboard</a>
             <a href="penjualan.php" class="nav-item active"><span class="nav-icon">🛒</span> Penjualan</a>
-            <a href="#" class="nav-item"><span class="nav-icon">📦</span> Produk</a>
-            <a href="#" class="nav-item"><span class="nav-icon">🗳️</span> Stok</a>
+            <a href="produk.php" class="nav-item"><span class="nav-icon">📦</span> Produk</a>
+            <a href="stok.php" class="nav-item"><span class="nav-icon">🗳️</span> Stok</a>
             <a href="#" class="nav-item"><span class="nav-icon">📋</span> Pembelian</a>
             <a href="#" class="nav-item"><span class="nav-icon">👥</span> Pelanggan</a>
             <a href="#" class="nav-item"><span class="nav-icon">📊</span> Laporan</a>
