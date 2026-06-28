@@ -872,3 +872,580 @@ ul {
         width: 100%;
     }
 }
+
+/* ====================== HALAMAN PELANGGAN ====================== */
+
+/* Sel nama pelanggan: avatar inisial + nama */
+.customer-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Lingkaran avatar inisial */
+.avatar-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.avatar-blue   { background: #dbeafe; color: #2563eb; }
+.avatar-green  { background: #d1fae5; color: #16a34a; }
+.avatar-purple { background: #ede9fe; color: #7c3aed; }
+.avatar-orange { background: #fef3c7; color: #d97706; }
+.avatar-teal   { background: #ccfbf1; color: #0d9488; }
+.avatar-red    { background: #fee2e2; color: #dc2626; }
+.avatar-gray   { background: #f3f4f6; color: #6b7280; }
+
+/* Tombol hapus selalu tampil merah (border & ikon), bukan hanya saat hover */
+.icon-btn-danger {
+    border-color: #fecaca;
+    color: #dc2626;
+}
+
+.icon-btn-danger:hover {
+    background: #fee2e2;
+}
+
+/* ====================== HALAMAN LAPORAN ====================== */
+
+/* Toolbar di level halaman (di luar card): filter periode kiri, unduh kanan */
+.page-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.page-toolbar .toolbar-field {
+    background: #fff;
+    cursor: pointer;
+}
+
+.page-toolbar .caret {
+    color: #9ca3af;
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+.btn-download {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tabel ringkasan laporan: header abu-abu, baris lebih lega */
+.table-report thead th {
+    background: #f3f4f6;
+    border-bottom: none;
+    font-size: 13px;
+    padding: 14px 12px;
+}
+
+.table-report td {
+    padding: 18px 12px;
+    font-size: 14px;
+}
+
+/* Kotak info di bawah tabel */
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #eff6ff;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-top: 18px;
+    font-size: 13.5px;
+    color: #374151;
+}
+
+.info-icon {
+    color: #2563eb;
+    font-size: 15px;
+}
+
+@media (max-width: 720px) {
+    .page-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+/* ====================== HALAMAN PENGATURAN ====================== */
+
+.settings-card {
+    margin-bottom: 20px;
+}
+
+.settings-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 26px;
+}
+
+.settings-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.settings-header h2 {
+    font-size: 16.5px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.settings-header p {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+/* Form grid */
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-row-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-row-full {
+    grid-template-columns: 1fr;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea {
+    border: 1px solid #e5e7eb;
+    border-radius: 9px;
+    padding: 11px 14px;
+    font-size: 13.5px;
+    color: #1f2937;
+    background: #fff;
+    width: 100%;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #93c5fd;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #9ca3af 50%), linear-gradient(135deg, #9ca3af 50%, transparent 50%);
+    background-position: calc(100% - 18px) center, calc(100% - 13px) center;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Password field dengan ikon mata */
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-field input {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #9ca3af;
+    user-select: none;
+}
+
+/* Toggle switch */
+.toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+    padding-top: 4px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #d1d5db;
+    border-radius: 999px;
+    transition: background 0.2s;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background: #22c55e;
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+    transform: translateX(18px);
+}
+
+.toggle-label {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+@media (max-width: 800px) {
+    .form-row,
+    .form-row-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ====================== ALERT / FLASH MESSAGE ====================== */
+.alert {
+    padding: 12px 16px;
+    border-radius: 9px;
+    font-size: 13.5px;
+    margin-bottom: 18px;
+}
+
+.alert-success {
+    background: #d1fae5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+/* ====================== HALAMAN LOGIN ====================== */
+
+.auth-body {
+    background: #eef1f6;
+}
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Lingkaran dekoratif di background halaman */
+.auth-page::before,
+.auth-page::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.06);
+    z-index: 0;
+}
+
+.auth-page::before {
+    width: 380px;
+    height: 380px;
+    top: -120px;
+    right: -100px;
+}
+
+.auth-page::after {
+    width: 260px;
+    height: 260px;
+    bottom: -80px;
+    left: -60px;
+}
+
+.auth-wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+}
+
+/* ---------- Panel kiri ---------- */
+.auth-left {
+    flex: 1;
+    background: linear-gradient(160deg, #0b1d3a 0%, #102a52 55%, #16345f 100%);
+    color: #fff;
+    padding: 44px 40px;
+    display: flex;
+    flex-direction: column;
+    min-height: 620px;
+    position: relative;
+}
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.auth-logo-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.auth-heading h1 {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.auth-heading p {
+    font-size: 14px;
+    color: #b9c4d6;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+/* Ilustrasi dekoratif berbasis emoji/CSS, menggantikan foto */
+.auth-illustration {
+    margin-top: auto;
+    position: relative;
+    height: 220px;
+}
+
+.illu-icon {
+    position: absolute;
+    font-size: 64px;
+    opacity: 0.9;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.35));
+}
+
+.illu-1 { left: 10px;  bottom: 10px; font-size: 90px; }
+.illu-2 { left: 130px; bottom: 70px; font-size: 50px; }
+.illu-3 { left: 190px; bottom: 10px; font-size: 60px; }
+.illu-4 { left: 70px;  bottom: 110px; font-size: 38px; }
+
+/* ---------- Panel kanan (form) ---------- */
+.auth-right {
+    flex: 1;
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 28px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Input dengan ikon di kiri (email/password) */
+.input-icon-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon-field .input-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.input-icon-field input {
+    width: 100%;
+    padding: 12px 14px 12px 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 13.5px;
+    color: #1f2937;
+    font-family: inherit;
+}
+
+.input-icon-field input:focus {
+    outline: none;
+    border-color: #93c5fd;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+}
+
+.input-icon-field .eye-icon {
+    position: absolute;
+    right: 14px;
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.auth-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -4px;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: #374151;
+    cursor: pointer;
+}
+
+.checkbox-row input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 13px;
+    font-size: 14.5px;
+    border-radius: 10px;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 12.5px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.auth-divider span {
+    padding: 0 12px;
+}
+
+.auth-copyright {
+    margin-top: 26px;
+    font-size: 12.5px;
+    color: #9ca3af;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 860px) {
+    .auth-wrapper {
+        flex-direction: column;
+        max-width: 460px;
+    }
+    .auth-left {
+        min-height: auto;
+        padding: 32px 28px;
+    }
+    .auth-illustration {
+        display: none;
+    }
+    .auth-right {
+        padding: 36px 28px;
+    }
+}
